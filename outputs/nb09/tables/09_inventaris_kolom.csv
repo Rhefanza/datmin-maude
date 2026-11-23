@@ -1,0 +1,16 @@
+kolom,kelas,alasan,terisi_mentah,terisi_bersih,persen_bersih
+outcome,bocor label,outcome Death hampir identik dengan label Death,2561,2457,68.2
+adverse_event_flag,bocor label,"flag N hampir selalu Malfunction, Y pada semua Death",4779,3581,99.4
+product_problem_flag,bocor label,flag Y hampir selalu Malfunction,4670,3522,97.7
+patient_problems,audit saja,kode hasil penilaian pelapor; berisi 'Death' dan 'No Clinical Signs',4733,3519,97.6
+product_problems,audit saja,kode hasil penilaian; menandai template (Detachment),4697,3485,96.7
+mfr_narrative,audit saja,"narasi tindak lanjut pabrikan, bisa memuat hasil investigasi",3507,2458,68.2
+remedial_action,analisis saja,"tindakan setelah kejadian, tidak boleh jadi input",1772,793,22.0
+patient_age,kandidat bersyarat,tidak menentukan label; ketersediaan saat prediksi belum terverifikasi,1969,1861,51.6
+patient_sex,kandidat bersyarat,idem; sebagian besar Unknown/kosong,510,486,13.5
+event_location,analisis saja,pola era/kanal pelaporan,470,405,11.2
+device_operator,analisis saja,didominasi HEALTH PROFESSIONAL,4505,3368,93.5
+reporter_occupation,analisis saja,pola kanal pelaporan,4389,3245,90.0
+source_type,analisis saja,pola kanal pelaporan,3929,2818,78.2
+report_source,analisis saja,pola kanal pelaporan,4833,3604,100.0
+date_of_event,analisis saja,era pelaporan; jalan pintas temporal,4670,3505,97.3

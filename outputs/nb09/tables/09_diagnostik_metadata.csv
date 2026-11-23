@@ -1,0 +1,7 @@
+fitur,macro_f1_5fold,sd_5fold,death_benar_5fold,macro_f1_temporal,death_benar_temporal,n_uji_temporal
+indikator hilang saja,0.429,0.011,0/36,0.408,0/10,1312
+umur + jenis kelamin,0.342,0.01,8/36,0.428,1/10,1312
+enam metadata,0.409,0.015,11/36,0.428,1/10,1312
+era saja,0.335,0.067,3/36,0.164,0/10,1312
+enam metadata + era,0.439,0.019,12/36,0.425,1/10,1312
+narasi (TF-IDF + LR),0.667,0.057,10/36,0.567,2/10,1312

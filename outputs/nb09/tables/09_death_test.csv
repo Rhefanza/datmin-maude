@@ -1,0 +1,7 @@
+mdr_report_key,tahun,y_pred,outcome_grup,narasi_ada_penanda_kematian
+297673,2000,Death,Death,True
+334671,2001,Injury,Death,False
+4339994,2014,Death,Death,True
+5778348,2016,Injury,Death,True
+5895839,2016,Death,Death,True
+22644009,2025,Death,Death,True

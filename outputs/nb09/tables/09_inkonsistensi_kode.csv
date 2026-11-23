@@ -1,0 +1,8 @@
+pola,jumlah,dari,persen
+Malfunction + luka bakar (longgar),89,1082,8.2
+Malfunction + luka bakar (ketat),68,1082,6.3
+Malfunction + outcome berat,13,1082,1.2
+Injury + tanpa dampak (minimal satu),51,2144,2.4
+Injury + tanpa dampak (semua token),41,2144,1.9
+Injury/Malfunction/Other + narasi menyebut kematian,35,3568,1.0
+Death + narasi tanpa penanda kematian,4,36,11.1

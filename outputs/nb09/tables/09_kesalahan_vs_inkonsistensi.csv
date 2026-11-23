@@ -1,0 +1,6 @@
+kelompok_salah,penanda,salah_bertanda,benar_bertanda,persen_salah,persen_benar,p_fisher
+Malfunction diprediksi Injury,luka bakar (ketat),7/19,3/124,36.8,2.4,2.3e-05
+Malfunction diprediksi Injury,luka bakar (longgar),8/19,6/124,42.1,4.8,4e-05
+Injury diprediksi Malfunction,tanpa dampak (semua token),1/10,3/314,10.0,1.0,0.12
+Injury diprediksi Malfunction,tanpa dampak (minimal satu),1/10,4/314,10.0,1.3,0.15
+Injury diprediksi Other,tanpa dampak (minimal satu),0/16,4/314,0.0,1.3,1.0

@@ -11,6 +11,11 @@ Injury, Malfunction, Death, Other.
 | `notebooks/02_prapemrosesan_split.ipynb` | buang kata pembocor label, dua jalur teks, 5-fold per grup, split temporal | `data_bersih.csv` → `data/processed/data_eksperimen.csv` |
 | `notebooks/03_Modeling,_Evaluation,_and_Error_Analysis.ipynb` | modeling 5-fold OOF (TF-IDF, BiomedBERT, DeBERTa zero-shot), McNemar, telaah kesalahan (Colab) | `data_eksperimen.csv` → `outputs/predictions/`, `outputs/tables03/` |
 | `notebooks/08_eksperimen_lengkap.ipynb` | eksperimen lengkap train/val/test (70/15/15 per grup) di Kaggle GPU T4 | `maude_mri_LNH.csv` → `outputs/nb08/` |
+| `notebooks/09_audit_label_metadata.ipynb` | audit label dengan kolom terstruktur openFDA (outcome, kode masalah pasien/produk, flag), diagnostik metadata, kontrol positif kebocoran, daftar telaah buta (CPU, ±2 menit) | `maude_LNH_raw.jsonl` + `data_eksperimen.csv` + prediksi NB08 → `outputs/nb09/` |
+
+Generator notebook 08 dan 09 ada di `scripts/`. Menjalankan generator akan menimpa notebook-nya.
+
+**Reprodusibilitas split notebook 08.** Partisi `StratifiedGroupKFold` ternyata bisa berbeda antar-lingkungan. Run Kaggle menghasilkan 2.536/534/534, sedangkan run lokal 2.530/537/537 (sama dengan `split_tvt.csv`). Test Kaggle tetap utuh per grup, dan daftar ID-nya ada di `outputs/nb08/tables/05_manifest_test.csv`. Run berikutnya menyimpan `05_manifest_split.csv` beserta versi pustaka, dan memakai `data/processed/split_nb08_beku.csv` bila file itu ada.
 
 Notebook 01 dan 02 bisa dijalankan dari clone repo ini (lokal/Colab) atau di Kaggle.
 Notebook 08 dijalankan di Kaggle (GPU, ±2 jam). Keluarannya ada di `outputs/nb08/`, tetapi file notebook di repo tidak berisi keluaran sel.

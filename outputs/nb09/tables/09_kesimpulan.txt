@@ -1,0 +1,7 @@
+1. Kolom outcome, flag kejadian merugikan, dan flag masalah produk BOCOR LABEL: outcome Death muncul pada 35/36 laporan Death dan 0 laporan kelas lain; 928/1082 Malfunction tanpa outcome. Kolom ini dipakai untuk audit, bukan fitur.
+2. Kontrol positif: narasi 0.667 -> narasi + outcome 0.846 (Death benar 10/36 -> 35/36); kenaikan ini adalah kebocoran, bukan kemampuan model.
+3. Inkonsistensi kode: 68/1082 Malfunction punya kode luka bakar (ketat; longgar 89), 41/2144 Injury hanya berkode tanpa dampak, 35 laporan non-Death menyebut kematian di narasi.
+4. Kesalahan notebook 08: luka bakar (ketat) ada pada 7/19 Malfunction yang diprediksi Injury vs 3/124 yang benar (Fisher p=2.3e-05). Sebagian kesalahan model adalah laporan berkode tidak konsisten.
+5. Other: recall test {'s.d. 2010': 0.484, '2011-2020': 0.0, '2021+': 0.0} per era; kode masalah pasien teratas adalah luka bakar/lepuh, jadi Other lama berisi laporan bergaya cedera.
+6. Metadata: enam metadata 0.409 (5-fold) / 0.428 (temporal), jauh di bawah narasi 0.667 / 0.567. Era saja turun dari 0.335 ke 0.164 saat diuji di era baru (jalan pintas yang tidak berpindah), dan indikator kolom kosong saja sudah memberi 0.429: kelengkapan formulir berbeda antarkelas. Metadata tidak dijadikan fitur model utama.
+7. Daftar telaah buta: 152 kandidat + 21 kontrol; prediksi model disembunyikan di file kunci. Ketidakcocokan kode adalah alasan untuk menelaah, bukan bukti salah label.
