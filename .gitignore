@@ -1,0 +1,7 @@
+.env
+kaggle.json
+access_token
+*.log
+.ipynb_checkpoints/
+outputs/nb08_smoke/
+__pycache__/

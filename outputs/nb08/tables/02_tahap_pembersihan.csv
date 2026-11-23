@@ -1,0 +1,5 @@
+,Injury,Malfunction,Death,Other,Total
+0. 4 kelas berlabel,2214,2104,37,389,4744
+1. narasi >= 10 kata,2201,2061,36,347,4645
+2. buang duplikat persis,2178,1296,36,346,3856
+3. buang duplikat mirip,2144,1082,36,342,3604

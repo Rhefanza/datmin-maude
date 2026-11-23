@@ -1,0 +1,5 @@
+pembanding,juara_benar_lawan_salah,juara_salah_lawan_benar,p,p_holm,bermakna_5%
+DL|BiLSTM|ROS|aug_bt,41,24,0.0463534743329112,0.1854138973316448,False
+ML|TF-IDF kata + SVM linear|SMOTE|tanpa_aug,34,25,0.2975952082844287,0.8927856248532862,False
+DL hybrid|BiomedBERT + BiLSTM + attention|bobot|aug_bt,28,21,0.3916029105474905,0.8927856248532862,False
+DL hybrid + HP|BiomedBERT + BiLSTM + attention (tuned)|bobot|aug_bt,25,23,0.8854334972865135,0.8927856248532862,False

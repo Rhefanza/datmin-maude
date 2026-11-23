@@ -1,0 +1,6 @@
+keluarga,model,imbalance,augmentasi,val_macro_f1,test_macro_f1,test_akurasi,test_f1_Injury,test_f1_Malfunction,test_f1_Death,test_f1_Other,test_recall_Death,detik
+ML,TF-IDF kata + SVM linear,SMOTE,tanpa_aug,0.812,0.606,0.839,0.893,0.836,0.286,0.41,0.167,0.166
+DL,BiLSTM,ROS,aug_bt,0.674,0.583,0.824,0.88,0.829,0.182,0.442,0.167,10.252
+DL hybrid,BiomedBERT + BiLSTM + attention,bobot,aug_bt,0.795,0.669,0.843,0.898,0.84,0.533,0.405,0.667,157.498
+DL hybrid + HP,BiomedBERT + BiLSTM + attention (tuned),bobot,aug_bt,0.817,0.662,0.852,0.904,0.818,0.5,0.426,0.333,238.325
+BART fine-tune,BART-large-MNLI fine-tune,ROS,aug_bt,0.82,0.722,0.856,0.909,0.852,0.727,0.4,0.667,668.851

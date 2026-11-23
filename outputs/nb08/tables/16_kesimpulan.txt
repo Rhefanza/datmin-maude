@@ -1,0 +1,9 @@
+
+1. Data bersih 3604 laporan (train 2536, val 534, test 534); split per grup kemiripan tanpa grup menyeberang.
+2. Model terbaik menurut val: BART-large-MNLI fine-tune [BART fine-tune] dengan ROS dan aug_bt
+   -> macro-F1 test 0.722, akurasi 0.856, F1 Death 0.727, recall Death 0.667.
+3. Terbaik per keluarga (macro-F1 test): ML 0.606; DL 0.583; DL hybrid 0.669; DL hybrid + HP 0.662; BART fine-tune 0.722
+4. Penanganan ketidakseimbangan dengan rata-rata macro-F1 test tertinggi: SMOTE/ROS; augmentasi: aug_bt.
+5. Uji McNemar-Holm: vs DL p_holm=0.185; vs ML p_holm=0.893; vs DL hybrid p_holm=0.893; vs DL hybrid + HP p_holm=0.893
+6. Alasan kesalahan terbanyak: Kosakata tumpang tindih. 36 laporan test salah untuk semua model terbaik; 55 kandidat salah label.
+7. Test Death hanya 6 laporan: satu laporan Death mengubah recall Death sebesar 17 poin persen, jadi angka Death harus dibaca hati-hati.

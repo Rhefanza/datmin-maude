@@ -1,0 +1,18 @@
+label,prediksi,alasan,jumlah
+Malfunction,Injury,"Ada cedera/luka bakar, dikode Malfunction",15
+Other,Injury,Other: gaya laporan lama,14
+Injury,Other,Diprediksi Other untuk laporan baru,8
+Injury,Other,Kosakata tumpang tindih,7
+Injury,Malfunction,Kosakata tumpang tindih,6
+Other,Malfunction,Kosakata tumpang tindih,5
+Malfunction,Injury,Kosakata tumpang tindih,4
+Malfunction,Other,Kosakata tumpang tindih,4
+Malfunction,Other,Diprediksi Other untuk laporan baru,3
+Other,Malfunction,Other: gaya laporan lama,2
+Injury,Malfunction,Narasi pendek (<30 kata),2
+Injury,Malfunction,"Template tanpa dampak pasien, dikode Injury",2
+Death,Injury,Death tanpa kata kematian,1
+Injury,Other,Narasi pendek (<30 kata),1
+Death,Injury,Kosakata tumpang tindih,1
+Injury,Death,"Narasi menyebut kematian, kode pelapor bukan Death",1
+Other,Injury,Kosakata tumpang tindih,1

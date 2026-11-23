@@ -1,0 +1,4 @@
+split,Injury,Malfunction,Death,Other,Total
+train,1475,769,26,266,2536
+val,328,163,4,39,534
+test,341,150,6,37,534
