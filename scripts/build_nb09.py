@@ -381,13 +381,37 @@ kontrol = pd.concat([d[(d.label == k) & (d.alasan_kandidat == "")].sample(min(n,
 tl = pd.concat([kand.assign(jenis="kandidat"), kontrol.assign(jenis="kontrol")]).sample(frac=1, random_state=SEED)
 tl["id_telaah"] = [f"T{i:03d}" for i in range(1, len(tl) + 1)]
 tl = tl.merge(t[["mdr_report_key", "y_pred"]], on="mdr_report_key", how="left")
+TERJ = pd.read_csv(ROOT / "data/processed/terjemahan_narasi_id.csv", dtype=str).set_index("mdr_report_key").narasi_id
 buta = tl[["id_telaah", "mdr_report_key", "era", "label", "outcome", "patient_problems", "event_text"]].assign(
     event_text=tl.event_text.str[:700], keputusan="", catatan="")
+buta.insert(buta.columns.get_loc("event_text"), "narasi_id", buta.mdr_report_key.map(TERJ))
+assert buta.narasi_id.notna().all(), "ada narasi telaah tanpa terjemahan"
 kunci = tl[["id_telaah", "mdr_report_key", "jenis", "alasan_kandidat", "y_pred"]].rename(columns={"y_pred": "prediksi_nb08_bila_di_test"})
-simpan_tab(buta, "09_telaah_buta", index=False); simpan_tab(kunci, "09_telaah_kunci", index=False)
+simpan_tab(buta, "09_telaah_buta", index=False, encoding="utf-8-sig"); simpan_tab(kunci, "09_telaah_kunci", index=False, encoding="utf-8-sig")
 print("kandidat:", len(kand), "| kontrol:", len(kontrol), "| total telaah:", len(tl))
 display(kand.alasan_kandidat.str.split("; ").explode().value_counts().rename("jumlah").to_frame())
 display(pd.crosstab(kand.era, kand.label))
+''')
+
+md(r'''
+### 8b. Analisis kesalahan notebook 08 dalam bahasa Indonesia
+
+Narasi MAUDE ditulis dalam bahasa Inggris, umumnya huruf kapital semua. Supaya telaah lebih mudah, cuplikan narasi di tabel kesalahan notebook 08 (`15_prediksi_salah.csv`, 77 laporan) dan di daftar telaah buta (173 laporan) diberi kolom terjemahan `narasi_id`.
+
+- **Sumber terjemahan:** `data/processed/terjemahan_narasi_id.csv` (237 narasi unik).
+- **Penerjemah:** Claude (asisten AI). Terjemahan **belum ditelaah manusia**.
+- **Aturan:** teks asli Inggris tetap disimpan dan tetap menjadi acuan. Terjemahan hanya alat bantu baca; terjemahan tidak dipakai untuk melatih atau menilai model.
+- **Penanda dalam terjemahan:** narasi yang terpotong diakhiri "…", dan tanda (B)(4)/(B)(6) adalah sensor FDA.
+''')
+code(r'''
+salah = pd.read_csv(ROOT / "outputs/nb08/tables/15_prediksi_salah.csv", dtype=str, keep_default_na=False)
+salah.insert(salah.columns.get_loc("cuplikan"), "narasi_id", salah.mdr_report_key.map(TERJ))
+assert salah.narasi_id.notna().all(), "ada kesalahan notebook 08 tanpa terjemahan"
+salah = salah.rename(columns={"cuplikan": "cuplikan_en"})
+simpan_tab(salah, "09_prediksi_salah_nb08_id", index=False, encoding="utf-8-sig")
+print("kesalahan notebook 08 dengan terjemahan:", len(salah))
+with pd.option_context("display.max_colwidth", 220):
+    display(salah[["mdr_report_key", "label", "prediksi", "alasan", "narasi_id"]].head(8))
 ''')
 
 md(r'''

@@ -1,4 +1,4 @@
-id_telaah,mdr_report_key,jenis,alasan_kandidat,prediksi_nb08_bila_di_test
+﻿id_telaah,mdr_report_key,jenis,alasan_kandidat,prediksi_nb08_bila_di_test
 T001,23321657,kontrol,,
 T002,798217,kandidat,Malfunction + luka bakar (ketat),
 T003,11744538,kandidat,Injury + tanpa dampak (semua token),
