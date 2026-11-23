@@ -1,0 +1,2 @@
+model,macro_f1_mean,macro_f1_std,pooled_oof_macro_f1,mean_training_time,total_training_time
+BiomedBERT_Embedding_LR,0.6443084608396931,0.02028608950459367,0.6450902383144094,15.990690517425538,79.95345258712769

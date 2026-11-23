@@ -1,0 +1,6 @@
+pasangan,jumlah_kesalahan
+Injury ↔ Other,247
+Injury ↔ Malfunction,229
+Malfunction ↔ Other,73
+Death ↔ Injury,26
+Death ↔ Malfunction,3

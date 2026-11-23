@@ -1,0 +1,12 @@
+best_model,comparison_model,both_correct,best_only_correct,competitor_only_correct,both_wrong,p_value,p_adjusted_holm,significant
+LinearSVC_Char_Tuned,DeBERTa_ZeroShot,2434,592,215,363,1.6769309456072846e-41,1.844624040168013e-40,True
+LinearSVC_Char_Tuned,BiomedBERT_Embedding_LR,2625,401,205,373,1.3358340653567834e-15,1.3358340653567833e-14,True
+LinearSVC_Char_Tuned,RandomForest_Word,2770,256,187,391,0.0012097886105018772,0.010888097494516896,True
+LinearSVC_Char_Tuned,LinearSVC_Word,2924,102,144,434,0.00881155674715662,0.07049245397725296,False
+LinearSVC_Char_Tuned,LinearSVC_Word_Tuned,2915,111,138,440,0.09922346595997424,0.6945642617198197,False
+LinearSVC_Char_Tuned,LinearSVC_Char,3018,8,16,562,0.15158963203430176,0.9095377922058105,False
+LinearSVC_Char_Tuned,LogisticRegression_Word,2913,113,135,443,0.18225342822232737,0.9112671411116369,False
+LinearSVC_Char_Tuned,ComplementNB_Word,2846,180,168,410,0.555479509586311,1.0,False
+LinearSVC_Char_Tuned,LogisticRegression_Word_Tuned,2889,137,134,444,0.9033311753360763,1.0,False
+LinearSVC_Char_Tuned,ComplementNB_Word_Tuned,2861,165,170,408,0.8270463005509309,1.0,False
+LinearSVC_Char_Tuned,BiomedBERT_Finetuned,2821,205,202,376,0.921046049676682,1.0,False

@@ -1,0 +1,2 @@
+model,macro_f1_mean,macro_f1_std,pooled_oof_macro_f1,inference_time
+DeBERTa_v3_ZeroShot,0.518094529228858,0.04086551008162982,0.5197097607637123,121.75521612167358
