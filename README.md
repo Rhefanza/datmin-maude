@@ -9,10 +9,13 @@ Injury, Malfunction, Death, Other.
 |---|---|---|
 | `notebooks/01_cleaning_eda.ipynb` | cleaning (narasi ≥10 kata, buang duplikat persis dan mirip, grup kemiripan) dan EDA | `data/raw/maude_mri_LNH.csv` → `data/interim/data_bersih.csv` (3.604 laporan) |
 | `notebooks/02_prapemrosesan_split.ipynb` | buang kata pembocor label, dua jalur teks, 5-fold per grup, split temporal | `data_bersih.csv` → `data/processed/data_eksperimen.csv` |
+| `notebooks/03_Modeling,_Evaluation,_and_Error_Analysis.ipynb` | modeling 5-fold OOF (TF-IDF, BiomedBERT, DeBERTa zero-shot), McNemar, telaah kesalahan (Colab) | `data_eksperimen.csv` → `outputs/predictions/`, `outputs/tables03/` |
 | `notebooks/08_eksperimen_lengkap.ipynb` | eksperimen lengkap train/val/test (70/15/15 per grup) di Kaggle GPU T4 | `maude_mri_LNH.csv` → `outputs/nb08/` |
 
 Notebook 01 dan 02 bisa dijalankan dari clone repo ini (lokal/Colab) atau di Kaggle.
 Notebook 08 dijalankan di Kaggle (GPU, ±2 jam). Keluarannya ada di `outputs/nb08/`, tetapi file notebook di repo tidak berisi keluaran sel.
+
+Dasar paper untuk setiap metode di notebook 08 (DOI sudah diperiksa, ditandai sama/modifikasi/data proyek) ada di [`docs/dasar_paper_metode.md`](docs/dasar_paper_metode.md).
 
 ## Ringkasan hasil notebook 08 (test, 534 laporan)
 
